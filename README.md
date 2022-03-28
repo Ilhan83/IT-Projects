@@ -108,7 +108,7 @@ This ELK server is configured to monitor the following machines:
 |-------|-----------|
 |Webserver 1|10.0.0.5|
 |Webserver 2|10.0.0.6|
-|Webserver3|10.0.0.8|
+|Webserver 3|10.0.0.8|
 
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
@@ -135,7 +135,7 @@ Answer the following questions to fill in the blanks:_
 Instal-Elk.yml is the playbook, and you copy it to Ansible conatiner in /etc/Ansible/.
 - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
 The Hosts file has to be updated  to make ANsible run by indicating the appropriate IP address along with following addition: ansible_python_interpreter=/usr/bin/python3 . The appropriate playbook has to be created (with nano).
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Which URL do you navigate to in order to check that the ELK server is running?
  http://20.25.86.202:5601/app/kibana#/home
 
 

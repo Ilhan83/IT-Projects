@@ -105,6 +105,7 @@ This ELK server is configured to monitor the following machines:
 - List the IP addresses of the machines you are monitoring
 
 |VM Name| IP Address|
+|-------|-----------|
 |Webserver 1|10.0.0.5|
 |Webserver 2|10.0.0.6|
 |Webserver3|10.0.0.8|

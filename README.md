@@ -47,14 +47,14 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 Filebeat collects data about the file system, in other words it monitors the log files or loactions that you specify, collects log events and forwards them either to Elasticsearch or Logstash for indexing.
 - What does Metricbeat record?
 
-Metricbeats collects machines metrics from the system and services that are running on the server) such as uptime.
+Metricbeats collects machines metrics (from the system and services that are running on the server) such as uptime.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  |13.86.154.20; 10.0.0.4| Linux  |
+| Jump Box | Gateway  |13.86.154.20; 10.0.0.4 | Linux  |
 | Web 1    | Webserver|10.0.0.5      |         Linux   |
 | Web 2     |Webserver|  10.0.0.6  |            Linux  |
 | Web 3    |Webserver|10.0.0.8|Linux|

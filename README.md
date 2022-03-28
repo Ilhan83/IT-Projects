@@ -76,7 +76,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes           | 13.86.154.20; 10.0.0.    |
+| Jump Box | Yes           | 13.86.154.20; 10.0.0.4    |
 |  Webserver 1 | No             |10.0.0.5                      |
 |  Webserver 2 | No        |10.0.0.6              
 |Webserver 3|No|10.0.0.8|

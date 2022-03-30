@@ -5,11 +5,12 @@ The files in this repository were used to configure the network depicted below.
 
 ![](Diagrams/ELK-Stack-Project.drawio.png)
 
-Network Security Rules for ELK VM
+- Network Security Rules for ELK VM
 
-![](Diagrams/ELK%20NSG-Rules.PNG)
+![](Diagrams/ELK-NSG-Rules.PNG)
 
-Network Security Rules for Jump Box and Webservers
+
+- Network Security Rules for Jump Box and Webservers
 
 ![](Diagrams/RedTeam%20NSG-Rules.PNG)
 
@@ -65,12 +66,12 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
- 73.247.212.56, which is my personal home network.
+ 73.247.212.56, which is the public IP of my home network.
 
 Machines within the network can only be accessed by Jump Box via SSH.
 - Which machine did you allow to access your ELK VM? What was its IP address?
 
-My ELK VM can be access by my Jump Box VM via Private IP 10.0.0.4
+My ELK VM can be access by my Jump Box VM via Private IP 10.2.0.4
 
 A summary of the access policies in place can be found in the table below.
 
@@ -90,11 +91,11 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 Reduction of human error and simplifying the process of configuring potentially thousand of machines identically at once.
 
 The playbook implements the following tasks:
-- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- Installing Docker
-- Installing Python3
-- Increasing Virtual Memory
-- Enable service docker on boot
+- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
+  - Installing Docker
+  - Installing Python3
+  - Increasing Virtual Memory
+  - Enable service docker on boot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -127,15 +128,18 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the Playbook file to Ansible.
-- Update the Hosts file to include webservers (Web 1; Web 2; Web 3)
-- Run the playbook, and navigate to Kibana to check that the installation worked as expected.
+- Update the Hosts file to include webservers (Web 1; Web 2; Web 3) and Elk VM.
+- Run the playbook, and navigate to Kibana to check that the installation worked as expected (http://20.25.86.202:5601/app/kibana#/home).
 
-Answer the following questions to fill in the blanks:_
+Answer the following questions to fill in the blanks:
 - Which file is the playbook? Where do you copy it? 
-Instal-Elk.yml is the playbook, and you copy it to Ansible conatiner in /etc/Ansible/.
-- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
-The Hosts file has to be updated  to make ANsible run by indicating the appropriate IP address along with following addition: ansible_python_interpreter=/usr/bin/python3 . The appropriate playbook has to be created (with nano).
+
+Instal-Elk.yml is the playbook, and you copy it to Ansible container in /etc/Ansible/.
+- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+ 
+The 'Hosts' file has to be updated to make Ansible run by indicating the appropriate IP address along with the following addition: ansible_python_interpreter=/usr/bin/python3. The appropriate playbook has to be created (with nano).
 - Which URL do you navigate to in order to check that the ELK server is running?
+
  http://20.25.86.202:5601/app/kibana#/home
 
 
